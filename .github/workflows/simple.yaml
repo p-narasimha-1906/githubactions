@@ -10,3 +10,8 @@ jobs:
         run:
           npm -v
           node -v
+  run-she-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: kesav
+        run: echo "madhav is good"
