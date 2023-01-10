@@ -15,3 +15,7 @@ jobs:
     steps:
       - name: kesav
         run: echo "madhav is good"
+      - name: pyhon
+        run:
+          print("hello")
+        shell: python
