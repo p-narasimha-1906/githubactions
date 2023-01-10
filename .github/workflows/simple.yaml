@@ -11,7 +11,9 @@ jobs:
           npm -v
           node -v
   run-she-command:
+    
     runs-on: ubuntu-latest
+    needs: ["run-shell-command"]
     steps:
       - name: kesav
         run: echo "madhav is good"
