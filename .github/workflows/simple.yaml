@@ -6,3 +6,7 @@ jobs:
     steps:
       - name: hollo
         run: echo "my name is narasimha"
+      - name: multiline
+        run:
+          npm -v
+          node -v
