@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: getcode
-        uses: p-narasimha-1906/githubactions@v1
+        uses: p-narasimha-1906/githubactions@v3
