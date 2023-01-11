@@ -11,10 +11,6 @@ jobs:
         with:
           node-version: 18
       - name: install dependencies
-<<<<<<< HEAD
         run: npm install
-=======
-        run: npm
->>>>>>> 23dab32b2f13962a75aa2cc5c6d5b2761e0efd19
       - name: run tests
         run: npm test
