@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: greeting
-        run: echo"hello how are you"
+        run: echo "hello how are you"
       - name: multiline
         run: echo "bye"
