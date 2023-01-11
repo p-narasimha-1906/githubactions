@@ -7,7 +7,7 @@ jobs:
       - name: hollo
         run: echo "my name is narasimha"
       - name: multiline
-        run:
+        run: |
           npm -v
           node -v
   run-she-command:
