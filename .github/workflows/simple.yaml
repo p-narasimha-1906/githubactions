@@ -19,12 +19,10 @@ jobs:
         run: echo "madhav is good"
       - name: pyhon
         run: |
-          int l={10,20}
-          for(int i=0,i<=l.length(),i++)
-          {
-          print(l[i])
-          }
+          print("srikanth is lover boy")
+          print("his lover name is vani")
+          
 
           
-        shell: java
+        shell: python
         
