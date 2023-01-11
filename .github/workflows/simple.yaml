@@ -18,7 +18,9 @@ jobs:
       - name: kesav
         run: echo "madhav is good"
       - name: pyhon
-        run:
-          print(9+2)
+        run: |
+          a=10
+          b=20
+          print(a+b)
         shell: python
         
