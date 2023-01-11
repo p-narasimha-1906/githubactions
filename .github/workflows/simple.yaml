@@ -19,8 +19,11 @@ jobs:
         run: echo "madhav is good"
       - name: pyhon
         run: |
-          a=10
-          b=20
-          print(a+b)
+          l=[10,20]
+          for i in range(len(l)):
+              if l[i]%2==0:
+                  print(l[i])
+
+          
         shell: python
         
