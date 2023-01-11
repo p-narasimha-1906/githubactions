@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: hollo
-        run: eccho "my name is narasimha"
+        run: echo "my name is narasimha"
       - name: multiline
         run:
           npm -v
