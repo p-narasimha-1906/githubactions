@@ -1,0 +1,8 @@
+name: project
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: getcode
+        uses: actions/githubactions@v3
