@@ -19,11 +19,12 @@ jobs:
         run: echo "madhav is good"
       - name: pyhon
         run: |
-          l=[10,20]
-          for i in range(len(l)):
-              if l[i]%2==0:
-                  print(l[i])
+          int l={10,20}
+          for(int i=0,i<=l.length(),i++)
+          {
+          print(l[i])
+          }
 
           
-        shell: python
+        shell: java
         
