@@ -1,0 +1,8 @@
+name: simple yaml
+on: [push]
+jobs:
+    job1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: python
+          run: echo "hiiiiiiiii"
