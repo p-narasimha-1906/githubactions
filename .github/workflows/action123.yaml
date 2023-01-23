@@ -8,3 +8,12 @@ jobs:
           run: |
             echo "hiiiiiiiii"
             echo "jjjjjjjjjj"
+    job2:
+      runs-on: ubuntu-latest
+      steps:
+        - name: python program
+          run: |
+            a=10
+            b=20
+            print(a+b)
+          shell: python
