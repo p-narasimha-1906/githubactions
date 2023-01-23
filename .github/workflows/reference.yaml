@@ -1,0 +1,8 @@
+name: Shell
+on: [push]
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: reference
+        uses: p-narasimha-1906/githubactions@fba55884cb11d8f77d390e9430c70155c0273f8a
