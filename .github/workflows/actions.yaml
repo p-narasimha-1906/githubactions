@@ -1,8 +1,0 @@
-name: project
-on: push
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: getcode
-        uses: p-narasimha-1906/githubactions@e0ff98046fcfd19cd38d52e7b395e707d22c295b
