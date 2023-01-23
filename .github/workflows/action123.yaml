@@ -10,6 +10,7 @@ jobs:
             echo "jjjjjjjjjj"
     job2:
       runs-on: ubuntu-latest
+      needs: ["job1"]
       steps:
         - name: python program
           run: |

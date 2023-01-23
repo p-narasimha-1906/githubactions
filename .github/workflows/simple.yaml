@@ -20,7 +20,7 @@ jobs:
       - name: pyhon
         run: |
           print("srikanth is lover boy")
-          print("his lover name is vani")
+          print("his lover name")
           
 
           
