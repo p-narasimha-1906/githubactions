@@ -29,4 +29,13 @@ jobs:
       run: terraform plan
     - name: building terraform
       run: terraform apply -auto-approve
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+    - name: build
+      run: docker build -t simple-ecr .
+    - name: tag
+      run: docker tag simple-ecr:latest 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr:latest
+    - name: push
+      run: docker push 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr:latest
     
