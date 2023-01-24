@@ -28,11 +28,11 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
     - name: build
-      run: docker build -t simpleecr .
+      run: docker build -t simple-ecr .
     - name: tag
-      run: docker tag simpleecr:latest 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simpleecr:latest
+      run: docker tag simple-ecr:latest 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr:latest
     - name: push
-      run: docker push 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simpleecr:latest
+      run: docker push 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr:latest
       
    
 
