@@ -31,4 +31,8 @@ jobs:
       run: docker tag simple-ecr:latest 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr:latest
     - name: push
       run: docker push 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr:latest
+    - name: pull
+      run: docker pull 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr:latest
+    - name: run
+      run: docker run 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr:latest
     
