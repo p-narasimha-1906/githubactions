@@ -34,7 +34,7 @@ jobs:
     - name: pull
       run: docker pull 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr:latest
     - name: run
-      run: docker run 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr@sha256:6d774fff9910ff0405c8886cb2dd71ad0a2b6061b0e251528f80df97d30fef0b
+      run: docker run 959761759673.dkr.ecr.ap-south-1.amazonaws.com/simple-ecr@sha256:3a890762429f3f418a3b7e3f4ac224e5119f7626b1fd375a7f917d50941fbf8d10ff0405c8886cb2dd71ad0a2b6061b0e251528f80df97d30fef0b
    
 
   
