@@ -1,0 +1,49 @@
+name: Deploy to Amazon ECSs
+
+on: workflow_dispatch
+
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRETE_KEY }}
+        aws-region: us-east-1
+        
+    - name: intializing terraform
+      run: terraform init
+    - name: plan
+      run: terraform plan
+    - name: building terraform
+      run: terraform apply -auto-approve
+    - name: build docker image
+      run: docker build -t pnarasimha1906/myimg .
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: |
+        docker build -t myimage .
+    - name: Tag the image
+      run: |
+        docker tag myimage pnarasimha1906/myimage
+    - name: Log in to Docker Hub
+      run: |
+        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+    - name: Push the image
+      run: |
+        docker push pnarasimha1906/myimage
+    - name: fetching image from dockerhub
+      run: docker pull pnarasimha1906/myimage
+    
